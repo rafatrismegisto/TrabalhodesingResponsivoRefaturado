@@ -1,0 +1,45 @@
+@use 'variaveis' as v;
+
+// Mixin para transições suaves
+// Aceita uma lista/comma-list de propriedades: @include transicao(background 0.3s, color 0.3s);
+@mixin transicao($propriedades...) {
+  // Atribui diretamente a lista passada como valor de transition
+  transition: $propriedades;
+}
+
+// Mixin para flexbox
+@mixin flexbox($direcao: row, $justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direcao;
+  justify-content: $justify;
+  align-items: $align;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Mixin para botões
+@mixin botao-base {
+  padding: v.$espacamento-base * 0.7;
+  background-color: v.$cor-primaria;
+  color: v.$cor-fundo;
+  border: none;
+  border-radius: v.$borda-padrao;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: v.$fonte-primaria;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include transicao(background 0.3s, color 0.3s);
+}
+
+// Mixin para container de seção
+@mixin container-secao {
+  background-color: v.$cor-fundo-secundaria;
+  border-radius: v.$borda-grande;
+  margin: v.$espacamento-grande auto;
+  max-width: 900px;
+  box-shadow: v.$sombra-padrao;
+  border: 1px solid v.$cor-primaria;
+  padding: v.$espacamento-grande v.$espacamento-base;
+}

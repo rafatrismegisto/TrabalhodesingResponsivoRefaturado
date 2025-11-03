@@ -1,0 +1,32 @@
+@use 'sass:math';
+
+// Cores
+$cor-primaria: #c9a94b;
+$cor-fundo: #181818;
+$cor-fundo-secundaria: #222;
+$cor-fundo-escura: #111;
+$cor-texto: #f5f5f5;
+
+// Tipografia
+$fonte-primaria: 'Oswald', Arial, sans-serif;
+$fonte-secundaria: 'Montserrat', Arial, sans-serif;
+
+// Espaçamentos
+$espacamento-base: 1rem;
+// usar math.div para evitar aviso de deprecação
+$espacamento-pequeno: math.div($espacamento-base, 2);
+$espacamento-medio: $espacamento-base * 1.5;
+$espacamento-grande: $espacamento-base * 2;
+
+// Breakpoints
+$breakpoint-tablet: 900px;
+$breakpoint-mobile: 600px;
+
+// Border radius
+$borda-padrao: 5px;
+$borda-grande: 10px;
+
+// Sombras
+// Usamos sombras simples; se quiser ajustar, altere as variáveis abaixo
+$sombra-padrao: 0 2px 8px rgba(201,169,75,0.10);
+$sombra-hover: 0 4px 16px rgba(201,169,75,0.25);

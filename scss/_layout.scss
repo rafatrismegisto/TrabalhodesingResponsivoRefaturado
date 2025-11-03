@@ -1,0 +1,116 @@
+@use 'variaveis' as v;
+@use 'mixins' as m;
+
+/* Header */
+.header {
+  background-color: v.$cor-fundo-escura;
+  color: v.$cor-texto;
+  padding: v.$espacamento-grande + v.$espacamento-pequeno v.$espacamento-base v.$espacamento-medio;
+  border-bottom: 3px solid v.$cor-primaria;
+  text-align: center;
+
+  &__title {
+    font-size: 2.8rem;
+    font-family: v.$fonte-primaria;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 0 0 v.$espacamento-grande 0;
+    color: v.$cor-primaria;
+    text-shadow: 0 2px 8px #000;
+  }
+}
+
+/* Navegação */
+.nav {
+  @include m.flexbox;
+  margin-top: 0;
+
+  &__list {
+    @include m.flexbox($gap: 4rem);
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    font-family: v.$fonte-primaria;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 24px;
+      background: v.$cor-primaria;
+      position: absolute;
+      right: -2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 2px;
+      opacity: 0.7;
+    }
+  }
+
+  &__link {
+    color: v.$cor-texto;
+    padding: v.$espacamento-pequeno v.$espacamento-medio;
+    @include m.transicao(color 0.3s);
+    font-weight: bold;
+
+    &:hover {
+      color: v.$cor-primaria;
+      text-shadow: 0 0 8px v.$cor-primaria;
+    }
+  }
+}
+
+/* Menu/Cardápio */
+.menu {
+  padding: v.$espacamento-grande v.$espacamento-base;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: v.$espacamento-grande;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: v.$cor-fundo-escura;
+  color: v.$cor-primaria;
+  text-align: center;
+  padding: v.$espacamento-base;
+  margin-top: v.$espacamento-grande;
+  font-size: 1rem;
+  border-top: 2px solid v.$cor-primaria;
+  font-family: v.$fonte-primaria;
+}
+
+/* Responsividade */
+@media (max-width: v.$breakpoint-tablet) {
+  .menu__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: v.$breakpoint-mobile) {
+  .header {
+    padding: v.$espacamento-base v.$espacamento-pequeno;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: v.$espacamento-base;
+  }
+
+  .menu__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-container {
+    padding: v.$espacamento-base v.$espacamento-pequeno;
+    margin: v.$espacamento-base 0;
+  }
+}

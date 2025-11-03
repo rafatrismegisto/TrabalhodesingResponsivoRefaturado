@@ -1,0 +1,28 @@
+@use 'variaveis' as v;
+
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$fonte-primaria;
+  background-color: v.$cor-fundo;
+  color: v.$cor-texto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}

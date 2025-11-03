@@ -1,0 +1,82 @@
+@use 'variaveis' as v;
+@use 'mixins' as m;
+
+/* Botão */
+.button {
+  @include m.botao-base;
+  
+  &:hover {
+    background-color: v.$cor-fundo;
+    color: v.$cor-primaria;
+    border: 1px solid v.$cor-primaria;
+  }
+}
+
+/* Container de Seção */
+.section-container {
+  @include m.container-secao;
+  
+  &--dark {
+    background-color: v.$cor-fundo;
+  }
+}
+
+/* Card de Serviço */
+.service-card {
+  background-color: v.$cor-fundo;
+  padding: v.$espacamento-medio;
+  border-radius: v.$borda-grande;
+  box-shadow: v.$sombra-padrao;
+  text-align: center;
+  @include m.transicao(transform 0.2s, box-shadow 0.2s);
+  border: 1px solid v.$cor-primaria;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: v.$sombra-hover;
+    background-color: v.$cor-fundo-secundaria;
+  }
+
+  &__title {
+    color: v.$cor-primaria;
+    margin-bottom: v.$espacamento-pequeno;
+    font-family: v.$fonte-primaria;
+    text-transform: uppercase;
+  }
+}
+
+/* Depoimento */
+.testimonial {
+  font-style: italic;
+  margin: v.$espacamento-base 0;
+  padding-left: v.$espacamento-base;
+  border-left: 4px solid v.$cor-primaria;
+  color: v.$cor-primaria;
+  font-family: v.$fonte-primaria;
+}
+
+/* Formulário */
+.form {
+  @include m.flexbox(column, flex-start, stretch, v.$espacamento-base);
+  margin-top: v.$espacamento-base;
+
+  &__label {
+    font-weight: bold;
+    color: v.$cor-primaria;
+    font-family: v.$fonte-primaria;
+  }
+
+  &__input,
+  &__textarea {
+    padding: v.$espacamento-base * 0.7;
+    border: 1px solid v.$cor-primaria;
+    border-radius: v.$borda-padrao;
+    font-size: 1rem;
+    background: v.$cor-fundo-secundaria;
+    color: v.$cor-texto;
+
+    &:focus {
+      outline: 2px solid v.$cor-primaria;
+    }
+  }
+}

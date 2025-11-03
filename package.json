@@ -1,0 +1,12 @@
+{
+  "name": "agencia-criativa-web",
+  "version": "1.0.0",
+  "description": "Projeto Agência Criativa Web com SASS",
+  "scripts": {
+    "sass": "sass scss/estilos.scss:css/estilos.css --watch --style compressed",
+    "build": "sass scss/estilos.scss:css/estilos.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

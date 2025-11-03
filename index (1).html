@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria Sabor & Arte</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Hamburgueria Sabor & Arte</h1>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">Início</a></li>
+                <li class="nav__item"><a class="nav__link" href="#sobre">Sobre Nós</a></li>
+                <li class="nav__item"><a class="nav__link" href="#cardapio">Cardápio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#depoimentos">Depoimentos</a></li>
+                <li class="nav__item"><a class="nav__link" href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="sobre" class="section-container">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por hambúrgueres artesanais e buscamos sempre inovar no sabor e na experiência dos nossos clientes.</p>
+    </section>
+
+    <section id="cardapio" class="menu">
+        <h2>Cardápio</h2>
+        <div class="menu__grid">
+            <div class="service-card">
+                <h3 class="service-card__title">Hambúrguer Clássico</h3>
+                <p>Pão artesanal, carne 180g, queijo cheddar, alface e tomate.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-card__title">Hambúrguer Vegano</h3>
+                <p>Pão integral, hambúrguer de grão-de-bico, rúcula e molho especial.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-card__title">Batatas Rústicas</h3>
+                <p>Batatas crocantes com especiarias da casa.</p>
+            </div>
+            <div class="service-card">
+                <h3 class="service-card__title">Milkshake</h3>
+                <p>Chocolate, morango ou baunilha, feito com sorvete artesanal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="section-container">
+        <h2>Depoimentos</h2>
+        <blockquote class="testimonial">"O melhor hambúrguer que já comi! Atendimento excelente." - João Silva</blockquote>
+        <blockquote class="testimonial">"Ambiente aconchegante e sabores incríveis. Recomendo!" - Maria Souza</blockquote>
+    </section>
+
+    <section id="contato" class="section-container section-container--dark">
+        <h2>Contato</h2>
+        <p>Endereço: Rua das Delícias, 123 - Centro</p>
+        <p>Telefone: (11) 99999-9999</p>
+        <p>E-mail: contato@saborearte.com.br</p>
+        <form class="form">
+            <label class="form__label" for="nome">Nome:</label>
+            <input class="form__input" type="text" id="nome" name="nome">
+            <label class="form__label" for="email">E-mail:</label>
+            <input class="form__input" type="email" id="email" name="email">
+            <label class="form__label" for="mensagem">Mensagem:</label>
+            <textarea class="form__textarea" id="mensagem" name="mensagem"></textarea>
+            <button class="button" type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Hamburgueria Sabor & Arte. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
